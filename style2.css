@@ -1,0 +1,63 @@
+body {
+    background-image : url(/Images/bio.jpg);
+    object-fit       : cover;
+    background-size  : 140%;
+    background-repeat: no-repeat;
+}
+
+
+.social {
+    border-radius: 150px;
+    height       : 3rem;
+    width        : 3rem;
+    content      : none;
+}
+
+.selfie {
+    width        : 7rem;
+    height       : 7rem;
+    border-radius: 40rem;
+    white-space  : normal;
+    float        : left;
+}
+
+.bio {
+    text-align: left;
+
+}
+
+@keyframes flip {
+    from {
+        transform                : perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+        animation-timing-function: ease-out;
+    }
+
+    40% {
+        transform                : perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        transform                : perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        animation-timing-function: ease-in;
+    }
+
+    80% {
+        transform                : perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        animation-timing-function: ease-in;
+    }
+
+    to {
+        transform                : perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        animation-timing-function: ease-in;
+    }
+}
+
+.bio.flip {
+    animation-duration : calc(var(--animate-duration) * 0.75);
+    backface-visibility: visible;
+    animation-name     : flip;
+    --animate-duration : 3s;
+    --animate-delay    : 0s;
+    --animate-repeat   : 2;
+}

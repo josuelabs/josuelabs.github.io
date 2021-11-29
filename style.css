@@ -1,0 +1,97 @@
+body {
+  background-image : url(/Images/desktop.jpeg);
+  background-repeat: no-repeat;
+  background-size  : cover;
+  font-family      : monospace, sans-serif;
+}
+
+.h1 {
+  text-transform : uppercase;
+  display        : flex;
+  justify-content: center;
+  align-items    : flex-end;
+  height         : 40vh;
+  font-size      : 4rem;
+  color          : rgb(207, 178, 140);
+  text-shadow    : 1px 1px 1px #000, 5px 5px 1px black
+}
+
+hr {
+  border-color: #ebebeb;
+  border-width: 4px;
+  max-width   : 65px;
+}
+
+.buttoncenter {
+  display        : flex;
+  justify-content: center;
+}
+
+.btn {
+  font-weight   : 700;
+  border-radius : 300px;
+  text-transform: uppercase;
+  cursor        : pointer;
+}
+
+.btn-primary {
+  background-color: #ebebeb;
+  border-color    : #ebebeb;
+}
+
+.btn-primary:hover {
+  background-color: #ebebeb;
+  border-color    : #ebebeb;
+  border-width    : 4px;
+}
+
+.btn-xl {
+  padding: 1rem 2rem;
+}
+
+@keyframes bounceIn {
+
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity  : 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity  : 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity  : 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation-duration: calc(var(--animate-duration) * 0.75);
+  animation-name    : bounceIn;
+  --animate-duration: 3s;
+  --animate-delay   : 0s;
+  --animate-repeat  : 2;
+}
