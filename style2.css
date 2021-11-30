@@ -1,8 +1,9 @@
 body {
     background-image : url(/Images/bio.jpg);
-    object-fit       : cover;
+    object-fit       :fill;
     background-size  : 140%;
     background-repeat: no-repeat;
+    text-align: center;
 }
 
 
@@ -10,21 +11,14 @@ body {
     border-radius: 150px;
     height       : 3rem;
     width        : 3rem;
-    content      : none;
 }
 
 .selfie {
-    width        : 7rem;
-    height       : 7rem;
+    width        : 10rem;
+    height       : 10rem;
     border-radius: 40rem;
-    white-space  : normal;
-    float        : left;
 }
 
-.bio {
-    text-align: left;
-
-}
 
 @keyframes flip {
     from {
